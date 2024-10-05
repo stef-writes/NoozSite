@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EEG Analysis</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        img {
+            max-width: 100%;
+            margin: 20px 0;
+            border: 1px solid #ccc;
+            padding: 10px;
+            background-color: #fff;
+        }
+        .video-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .video-container video {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="charts.html">Charts</a></li>
+            <li><a href="eeg.html">EEG</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h1>An Introduction to EEG Analysis: Exploring Data and Visualizing Results</h1>
+        <p>This is a write up on my first experience working with EEG data, exploring how to visualize brain signals effectively. I'll walk you through the steps I took while working with EEG channels, creating meaningful visualizations, and learning about the tools that helped bring everything together. I started with a basic understanding of EEG and ended up with multiple informative plots.</p>
+    </section>
+
+    <section>
+        <h2>Setting Up and Understanding the Script</h2>
+        <p>We began by loading a set of predefined EEG channels using MNE, a popular Python package for working with EEG and MEG data. Specifically, we used the 10-20 montage, a standard way to position electrodes on the scalp. This layout allowed us to understand the placement of each electrode and, in turn, what each channel represented. </p>
+    </section>
+
+    <section>
+        <h2>Selected Channels and Raw EEG Data</h2>
+        <p>Next, we focused on visualizing the raw EEG signals for four channels—EEG 001, EEG 002, EEG 003, and EEG 004. This is where each channel's electrical activity is represented over time. The video below shows the fluctuations in the EEG signals. The oscillations in each channel reflect the ongoing brain activity. These oscillations show the typical variations in voltage over time, reflecting different frequencies that occur as the brain operates. Fast, jagged lines may indicate higher-frequency brain waves, while slower, larger oscillations indicate lower-frequency waves.</p>
+        <!-- Embed video -->
+        <div class="video-container">
+            <video controls>
+                <source src="EEG Images/EEG Multi Channel Wave Clip.mov" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <section>
+        <h2>Power Spectral Density (PSD) Analysis</h2>
+        <p>To understand the frequency content of our EEG data, we created a 'Power vs Frequency' plot (PSD plot) for the selected channels, up to 50 Hz. The PSD plot is essential for understanding which frequency ranges are dominant. It provides insight into brain rhythms, like alpha (8-12 Hz), beta (13-30 Hz), and delta (0.5-4 Hz) waves, which can be linked to different mental states like relaxation or alertness. The power in each frequency band can help us determine the brain's activity level in different conditions.</p>
+        <img src="EEG Images/PSD Blank.png" alt="PSD Plot">
+        <img src="EEG Images/PSD Sections.png" alt="PSD Plot with Highlights">
+        <img src="EEG Images/Topo.Delta (.5 - 4 Hz).png" alt="Delta Waves Topography">
+        <img src="EEG Images/Topo.Alpha (6-12Hz).png" alt="Alpha Waves Topography">
+        <img src="EEG Images/Topo.Beta (14-30Hz).png" alt="Beta Waves Topography">
+    </section>
+
+    <section>
+        <h2>Alpha Band Power Analysis</h2>
+        <p>The next step was to analyze a specific frequency range: the alpha band (8-12 Hz). We computed the average power in this frequency range and plotted it for each selected channel in the form of a bar chart.
+
+            The alpha band is often associated with relaxed wakefulness and a lack of visual processing. This bar graph helps us quantify and compare the alpha power across different channels, indicating how active each electrode's region was in the alpha frequency band.</p>
+        <img src="EEG Images/AlphaBand Power.png" alt="Alpha Band Power Analysis Bar Chart">
+    </section>
+
+    <!-- Final Thoughts section -->
+    <section>
+        <h2>Final Thoughts</h2>
+        <p>This exploration allowed me to dive deeper into understanding EEG signals—from electrode placement to analyzing the frequency content of the brain signals. Visualizing EEG data is a powerful way to not only understand what's happening in the brain but also to communicate findings clearly. Each plot represents a different aspect of the data, and each tells a story about brain activity.</p>
+    </section>
+
+</body>
+</html>

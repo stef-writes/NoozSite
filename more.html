@@ -3,24 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charts</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>More Essays</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            text-align: center;
+        }
+        .essay-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .essay-button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="more.html">Charts</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section class="chart-gallery">
-        <h1>Charts</h1>
-        <img src="Charts/chart1.png" alt="Chart 1">
-        <img src="Charts/chart2.png" alt="Chart 2">
-        <img src="Charts/chart3.png" alt="Chart 3">
-    </section>
+    <div class="button-container">
+        <button class="essay-button" onclick="window.location.href='essay4.html';">Essay 4</button>
+        <button class="essay-button" onclick="window.location.href='essay5.html';">Essay 5</button>
+        <button class="essay-button" onclick="window.location.href='essay6.html';">Essay 6</button>
+    </div>
 </body>
 </html>

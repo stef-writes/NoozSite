@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charts</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        .chart-gallery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        .chart-gallery img {
+            max-width: 80%;  /* Increased image size */
+            margin: 20px 0;
+            border: 1px solid #ccc;
+            padding: 10px;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="charts.html">Charts</a></li>
+            <li><a href="eeg.html">EEG</a></li>
+        </ul>
+    </nav>
+
+    <div class="chart-gallery">
+        <h1>Charts</h1>
+        <img src="Charts/chart1.png" alt="Chart 1">
+        <img src="Charts/chart2.png" alt="Chart 2">
+        <img src="Charts/chart3.png" alt="Chart 3">
+    </div>
+</body>
+</html>

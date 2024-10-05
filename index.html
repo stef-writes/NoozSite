@@ -3,22 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Processors, Productivity & Profit</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Home</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        nav {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 120px; /* Increased spacing between boxes */
+            margin-top: 100px; /* Buffer from the top */
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            background-color: rgb(17, 16, 16); /* Black box color */
+            padding: 15px 30px;
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+        }
+        nav ul li a {
+            color: rgb(242, 236, 236); /* White text color */
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        .quote-container {
+            margin-top: 130px; /* Pushes quote further down */
+        }
+        h1 {
+            font-size: 2em;
+            color: #080808;
+            margin: 10px 0;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="more.html">Charts</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="charts.html">Economics</a></li>
+            <li><a href="eeg.html">Brain Viz</a></li>
+        </ul>
+    </nav>
 
-    <section class="homepage-content">
-        <h1>Processors, Productivity & Profit</h1>
-        <button onclick="window.location.href='more.html';">View Charts</button>
-    </section>
+    <div class="quote-container">
+        <h1>Enjoy Some Cool Data!</h1>
+    </div>
 </body>
 </html>
